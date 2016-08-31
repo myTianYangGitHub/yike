@@ -1,12 +1,12 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" ng-app="Yike">
 <head>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<title>豆瓣一刻</title>
 	<link rel="shortcut icon" href="./favicon.ico" type="image/x-icon">
-	<link rel="stylesheet/less" href="./less/main.less">
-	<script src="./libs/less.js"></script>
+	<link rel="stylesheet/less" href="./public/less/main.less">
+	<script src="./public/libs/less.js"></script>
 </head>
 <body>
 	<div class="viewport">
@@ -15,7 +15,7 @@
 			<dl>
 				<dt class="login">
 					<div class="avatar">
-						<img src="./images/avatar.png" alt="">
+						<img src="./public/images/avatar.png" alt="">
 					</div>
 					<span>登录</span>
 				</dt>
@@ -146,6 +146,9 @@
 			</div>
 		</div>
 	</div>
+	<script src="./bower_components/angular/angular.min.js"></script>
+	<script src="./bower_components/angular-route/angular-route.min.js"></script>
+	<script src="./scripts/app.js"></script>
 	<script>
 		var menu = document.querySelector('.menu');
 		var body = document.querySelector('.body');
