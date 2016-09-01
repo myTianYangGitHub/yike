@@ -1,10 +1,14 @@
 //定义最大的模快
-var Yike=angular.module('Yike',['ngRoute','Nav','Today']);
+var Yike=angular.module('Yike',['ngRoute','Nav','Today','Older']);
 Yike.config(['$routeProvider',function($routeProvider) {
 	$routeProvider.when('/',{
 		templateUrl:'../views/today.html',
 		controller:'TodayController'
-	})
+	}).when('/older',{
+		templateUrl:'../views/older.html',
+		controller:'OlderController'
+	});
+	
 }])
 Yike.run(['$rootScope',function($rootScope){
 	$rootScope.toggled=false;
@@ -29,9 +33,5 @@ Yike.run(['$rootScope',function($rootScope){
 					navs[i].style.transform = 'translate(-100%)';
 				}
 			}
-
-
-
-		
 	}
 }])
