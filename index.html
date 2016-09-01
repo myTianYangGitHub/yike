@@ -19,8 +19,8 @@
 					</div>
 					<span>登录</span>
 				</dt>
-				<dd class="active" ng-repeat="nav in navs">
-					<a href="javascript:;" ng-class="{{nav.icon}}">
+				<dd ng-class="{active:$index==key}" ng-repeat="nav in navs">
+					<a href="{{nav.link}}" ng-class="{{nav.icon}}">
 						<span>{{nav.text}}</span>
 					</a>
 				</dd>
@@ -39,86 +39,8 @@
 		</div>
 		<div class="container">
 			<!-- 主体 -->
-			<div  ng-class="{'body':true,'pull-right':toggled}">
-				<div class="item">
-					<!-- 日期分类 -->
-					<div class="mark">13Aug</div>
-					<ul class="posts large">
-						<!-- 文章 -->
-						<li>
-							<span href="javascript:;" class="tag">去远方</span>
-							<div class="cont">
-								<h3>朝圣山南扎央宗--探索藏文化之源探索藏文化之源探索藏文化之源</h3>
-								<div class="brief">
-									<p>那里有个很窄的洞，钻进去曾是莲花生大师修行的地方，在藏民心中钻洞是为了洗清</p>
-									<div class="thumb">
-										<img src="./uploads/post_1.png" alt="">
-									</div>
-								</div>							
-							</div>
-						</li>
-						<li>
-							<span href="javascript:;" class="tag">去远方</span>
-							<div class="cont">
-								<h3>朝圣山南扎央宗--探索藏文化之源</h3>
-								<div class="brief">
-									
-									<div class="gallery">
-										<img src="./uploads/post_2.png" alt="">
-									</div>
-								</div>							
-							</div>
-						</li>
-						<li>
-							<span href="javascript:;" class="tag">去远方</span>
-							<div class="cont">
-								<h3>朝圣山南扎央宗--探索藏文化之源探索藏文化之源探索藏文化之源</h3>
-								<div class="brief">
-									<p>那里有个很窄的洞，钻进去曾是莲花生大师修行的地方，在藏民心中钻洞是为了洗清</p>
-									<div class="thumb">
-										<img src="./uploads/post_1.png" alt="">
-									</div>
-								</div>							
-							</div>
-						</li>
-						<li>
-							<span href="javascript:;" class="tag">去远方</span>
-							<div class="cont">
-								<h3>朝圣山南扎央宗--探索藏文化之源探索藏文化之源探索藏文化之源</h3>
-								<div class="brief">
-									<p>那里有个很窄的洞，钻进去曾是莲花生大师修行的地方，在藏民心中钻洞是为了洗清</p>
-									<div class="thumb">
-										<img src="./uploads/post_1.png" alt="">
-									</div>
-								</div>							
-							</div>
-						</li>
-						<li>
-							<span href="javascript:;" class="tag">去远方</span>
-							<div class="cont">
-								<h3>朝圣山南扎央宗--探索藏文化之源探索藏文化之源探索藏文化之源</h3>
-								<div class="brief">
-									<p>那里有个很窄的洞，钻进去曾是莲花生大师修行的地方，在藏民心中钻洞是为了洗清</p>
-									<div class="thumb">
-										<img src="./uploads/post_1.png" alt="">
-									</div>
-								</div>							
-							</div>
-						</li>
-						<li>
-							<span href="javascript:;" class="tag">去远方</span>
-							<div class="cont">
-								<h3>朝圣山南扎央宗--探索藏文化之源探索藏文化之源探索藏文化之源</h3>
-								<div class="brief">
-									<p>那里有个很窄的洞，钻进去曾是莲花生大师修行的地方，在藏民心中钻洞是为了洗清</p>
-									<div class="thumb">
-										<img src="./uploads/post_1.png" alt="">
-									</div>
-								</div>							
-							</div>
-						</li>
-					</ul>
-				</div>
+			<div  ng-class="{'body':true,'pull-right':toggled}" ng-view>
+				
 			</div>
 		</div>
 	</div>
@@ -126,6 +48,7 @@
 	<script src="./bower_components/angular-route/angular-route.min.js"></script>
 	<script src="./scripts/app.js"></script>
 	<script src="./scripts/controller/NavsController.js"></script>
+	<script src="./scripts/controller/TodayController.js"></script>
 	<script>
 	
 	</script>
